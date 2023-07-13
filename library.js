@@ -1,9 +1,9 @@
 function openForm() {
-    document.getElementById("popupForm").style.display = "block";
+    document.getElementById("popup-form").style.display = "block";
 }
 
 function closeForm() {
-document.getElementById("popupForm").style.display = "none";
+document.getElementById("popup-form").style.display = "none";
 }
 
 let table = document.getElementById("myTable");
@@ -43,4 +43,9 @@ addBookToLibrary(mistborn);
 addBookToLibrary(lonesome);
 addBookToLibrary(potter);
 displayBooks();
+
+/*
+    need to take in the data that is inputted into the form
+    and add that information into the table.
+*/
 

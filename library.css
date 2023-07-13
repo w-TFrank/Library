@@ -1,4 +1,4 @@
-table, th, td {
+table, th {
     border: 1px solid black;
 }
 
@@ -12,28 +12,39 @@ button {
     margin: 15px;
 }
 
+.new-book-button {
+    width: 100px;
+}
+
 table {
-    width: 100%;
+    width: 750px;
 }
 
-* {
-box-sizing: border-box;
+.login-popup {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
 }
 
-.loginPopup {
-position: relative;
-text-align: center;
-width: 100%;
+.form-popup {
+    display: none;
+    border: 3px solid #999999;
 }
 
-.formPopup {
-display: flex;
-border: 3px solid #999999;
-max-width: 300px;
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
 }
 
-.formContainer {
-max-width: 300px;
-padding: 20px;
-background-color: white;
+.submit-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button, .close-button {
+    width: 75px;
 }

@@ -11,14 +11,10 @@
 </head>
 <body>
     <h1>Library</h1>
-    <div class="openBtn">
-      <button class="openButton" onclick="openForm()"><strong>New Book</strong></button>
-    </div>
-    <div class="loginPopup">
-      <div class="formPopup" id="popupForm">
-        <form action="/action_page.php" class="formContainer">
-
-            <h2>New Book</h2>
+    <button class="new-book-button" onclick="openForm()"><strong>New Book</strong></button>
+    <div class="login-popup">
+        <div class="form-popup" id="popup-form">
+        <form action="/action_page.php" class="form-container">
             <label for="title">Title</label>
             <input type="text" id="title" name="title" required>
 
@@ -28,15 +24,19 @@
             <label for="pages">Number of pages</label>
             <input type="number" id="pages" name="pages" required>
 
-            <label for="read">Read already?</label>
-            <input type="radio" name = "ans" value="yes"> Yes </br>
-            <input type="radio" name = "ans" value="no"> No </br>
+            <div>
+              <label for="read">Read already?</label><br>
+              <input type="radio" name = "ans" value="yes"> Yes </br>
+              <input type="radio" name = "ans" value="no"> No </br>
+            </div>
 
-            <button type="submit" class="button-submit">Submit</button>
-            <button type="button" class="button-close" onclick="closeForm()">Close</button>
+            <div class="submit-buttons">
+              <button type="submit" class="submit-button"><strong>Submit</strong></button>
+              <button type="button" class="close-button" onclick="closeForm()">Close</button>
+            </div>
 
         </form>
-      </div>
+        </div>
     </div>
 
     <table id="myTable">
@@ -51,6 +51,6 @@
 </html>
 
 <!--
-    finish getting the popup form lookin correct
+    website for popup form if need be
     https://www.w3docs.com/snippets/javascript/how-to-create-a-popup-form-using-javascript.html
 -->
