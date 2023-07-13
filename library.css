@@ -15,3 +15,25 @@ button {
 table {
     width: 100%;
 }
+
+* {
+box-sizing: border-box;
+}
+
+.loginPopup {
+position: relative;
+text-align: center;
+width: 100%;
+}
+
+.formPopup {
+display: flex;
+border: 3px solid #999999;
+max-width: 300px;
+}
+
+.formContainer {
+max-width: 300px;
+padding: 20px;
+background-color: white;
+}
