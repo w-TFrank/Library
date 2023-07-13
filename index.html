@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="library.css">
+    <script rel="text/javascript" src="library.js" defer></script>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <h1>Library</h1>
+
+    <div class="new-book">
+        <button class="new-book-button" onclick="openForm()">New Book</button>
+    </div>
+
+    <div class="new-book-popup" id="popup-form">
+        <form action="/action_page.php" class="form-container">
+            <h2>New Book</h2>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+            <label for="author"> Author</label>
+            <input type="text" id="author" name="author">
+            <label for="pages">Number of pages</label>
+            <input type="number" id="pages" name="pages">
+            <label for="read">Read already?</label>
+            <input type="radio" name = "ans" value="yes"> Yes </br>
+            <input type="radio" name = "ans" value="no"> No </br>
+        </form>
+    </div>
+
+    <table id="myTable">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Read</th>
+        </tr>
+    </table>
+</body>
+</html>
