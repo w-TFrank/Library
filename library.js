@@ -42,10 +42,24 @@ const potter = new Book("harry potter", "rowling", 2500, "yes");
 addBookToLibrary(mistborn);
 addBookToLibrary(lonesome);
 addBookToLibrary(potter);
-displayBooks();
 
-/*
-    need to take in the data that is inputted into the form
-    and add that information into the table.
-*/
+let title = document.querySelector("#title");
+let author = document.querySelector("#author");
+let pages = document.querySelector("#pages");
+let read = document.querySelector('input[name="ans"]:checked');
+let submitButton = document.querySelector(".submit-button");
 
+submitButton.addEventListener("click", submitButtonClick, true);
+
+function submitButtonClick(event) {
+    event.preventDefault();
+    console.log(title.value);
+    console.log(author.value);
+    console.log(pages.value);
+    console.log(read.value);
+    if ((title && author && pages) !== null) {
+        let userBook = new Book(title.value, author.value, pages.value, read.value);
+        addBookToLibrary(userBook);
+        displayBooks();
+    }
+}
