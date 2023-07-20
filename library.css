@@ -48,3 +48,13 @@ table {
 .submit-button, .close-button {
     width: 75px;
 }
+
+#remove-button {
+    width: 50px;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    color: red;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
