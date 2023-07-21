@@ -6,9 +6,11 @@ function closeForm() {
     document.getElementById("popup-form").style.display = "none";
 }
 let table = document.getElementById("myTable");
-removeButton = document.createElement('button');
+let removeButton = document.createElement('button');
 removeButton.innerText = "X";
-removeButton.setAttribute("id", "remove-button");
+removeButton.setAttribute("class", "remove-button");
+let readButton = document.createElement('button');
+readButton.setAttribute("class", "read-button");
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -36,7 +38,10 @@ function displayBooks() {
         cell2.innerHTML = myLibrary[i].title;
         cell3.innerHTML = myLibrary[i].author;
         cell4.innerHTML = myLibrary[i].pages;
-        cell5.innerHTML = myLibrary[i].read;
+        readButton.innerText = myLibrary[i].read;
+        cell5.appendChild(readButton.cloneNode(true));
+        cell5.addEventListener("click", readButtonClick);
+        cell5.setAttribute("id", myLibrary[i].read + i);
         cell6.appendChild(removeButton.cloneNode(true));
         cell6.addEventListener("click", removeButtonClick);
         //sets id so remove button knows what to remove
@@ -65,6 +70,17 @@ function submitButtonClick(event) {
     displayBooks();
 }
 
+//changes stored read value in myLibrary from yes to no or vice versa
+function readButtonClick() {
+    let changeRead = document.getElementById(this.id);
+    if (changeRead.innerText === "yes") {
+        changeRead.innerHTML = "<button class=read-button>no</button>";
+        myLibrary[this.id.match(/\d+/)[0]].read = "no";
+    } else {
+        changeRead.innerHTML = "<button class=read-button>yes</button>";
+        myLibrary[this.id.match(/\d+/)[0]].read = "yes";
+    }
+}
 
 function removeButtonClick() {
     //deletes selected row
